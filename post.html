@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Widget - Post</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/rainbow.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/htmlbars.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+  <div class="container">
+    <h1>Widget - Post</h1>
+    <p>Esse Widget tem como função principal apresentar uma outra landing page, de forma sucinta e que possibilite uma apresentação listada de outras páginas que façam parte do mesmo grupo de landing pages, ex.: Páginas de "Sou Básico"</p>
+
+    <section>
+      <hr>
+      <h2>Apresentação</h2>
+      <table class="table table-bordered table-sm">
+        <thead>
+          <th>Versão</th>
+          <th>Preview</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Desktop</td>
+            <td><img src="./assets/post.png" /></td>
+          </tr>
+          <tr>
+            <td>Mobile</td>
+            <td><img src="./assets/post-mobile.png"></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Markup Base</h2>
+      <p>Esse widget precisa de atributos definidos em sua tag, para manter a estrutura HTML inalteravel.</p>
+      <p class="alert alert-danger">Esse widget não necessita de nenhum conteúdo interno de sua tag de aplicação!</p>
+<pre>
+<code class="html">
+  &lt;landing-post image="history-1.jpg"
+    title="luna buschianelli"
+    desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+    link="https://basicoteste.com/pages/historias"&gt;
+  &lt;/landing-post&gt;
+
+</code>
+</pre>
+    </section>
+
+    <section>
+      <hr>
+      <h2>Attributos</h2>
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Exemplo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>image</td>
+            <td>Foto</td>
+            <td>Imagem que irá mostrar no widget</td>
+            <td>https://basico-shopify.imgix.net/s/files/1/2316/0905/files/history-1.jpg</td>
+          </tr>
+          <tr>
+            <td>title</td>
+            <td>Titulo</td>
+            <td>Titulo do widget</td>
+            <td>luna buschianelli</td>
+          </tr>
+          <tr>
+            <td>desc</td>
+            <td>Descrição</td>
+            <td>Breve texto corrido que aparece após o título.</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem possimus dicta fugiat modi libero illum beatae.</td>
+          </tr>
+          <tr>
+            <td>link</td>
+            <td>Link</td>
+            <td>Url para qual o widget aponta.</td>
+            <td>https://basicoteste.com/pages/historias</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <hr>
+      <h2>Aplicações</h2>
+      <p>Esse Widget só tem uma aplicação, com uma configuração de responsividade ja formatada.</p>
+
+<pre>
+<code class="html">
+  &lt;landing-post image="history-1.jpg"
+    title="luna buschianelli"
+    desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+    link="https://basicoteste.com/pages/historias"&gt;
+  &lt;/landing-post&gt;
+
+</code>
+</pre>
+    </section>
+  </div>
+</body>
+</html>
