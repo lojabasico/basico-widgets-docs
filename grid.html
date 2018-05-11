@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Widget - Grid</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/rainbow.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/htmlbars.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+  <div class="container">
+    <h1>Widget - Grid</h1>
+    <p>Esse Widget tem como função principal limitar componentes ao grid do layout.</p>
+    <p>Ele não é visivel no front da página, porem é um widget essencial para a formatação da página.</p>
+    <p>Outro detalhe importante desse widget é que ele é recursivo, ou seja, é possivel inserir uma grid dentro de outra, possibilitando assim o alinhamento dos componentes dentro de suas respectivas limitações de layout.</p>
+
+    <h3>Detalhes do grid:</h3>
+    <ul>
+      <li><b>total de colunas:</b> 36</li>
+      <li><b>gutter:</b> 14px</li>
+      <li><b>margens laterais:</b> 14px</li>
+    </ul>
+
+    <section>
+      <h2>Markup Base</h2>
+      <p>Esse widget precisa de atributos definidos em sua tag, para manter a estrutura HTML inalteravel.</p>
+  <pre>
+  <code class="html">
+  &lt;landing-grid columns="36"&gt;
+    &lt;landing-grid columns="36" desk_columns="8"&gt;
+      ...
+    &lt;/landing-grid&gt;
+  &lt;/landing-grid&gt;
+  </code>
+  </pre>
+    </section>
+
+    <section>
+      <hr>
+      <h2>Attributos</h2>
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Exemplo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>columns</td>
+            <td>Colunas (default)</td>
+            <td>Imagem que irá mostrar no widget</td>
+            <td>36</td>
+          </tr>
+          <tr>
+            <td>desk_columns</td>
+            <td>Colunas para definições de TABLET e DESKTOP</td>
+            <td>Numero de colunas que serão aplicadas somente nos breakpoints de DESKTOP e TABLET</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>mobile_columns</td>
+            <td>Colunas para breakpoint de MOBILE</td>
+            <td>Numero de colunas que serão aplicadas somente nos breakpoints de MOBILE</td>
+            <td>36</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <hr>
+      <h2>Aplicações</h2>
+      <p>Esse Widget só tem uma aplicação.</p>
+      <p>O conteúdo interno desse widget serão os outros widgets ou HTML, lembrando que o intuito deste é limitar esse conteúdo interno dentro do grid do tema.</p>
+  <pre>
+  <code class="html">
+  &lt;landing-grid columns="36"&gt;
+    &lt;landing-grid columns="36" desk_columns="8"&gt;
+      &lt;landing-text&gt;
+        &lt;h1&gt;Tela em Branco&lt;/h1&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+      &lt;/landing-text&gt;
+    &lt;/landing-grid&gt;
+  &lt;/landing-grid&gt;
+  </code>
+  </pre>
+      <p>Este exemplo renderiza o titulo e descrição no grid 36 para MOBILE e 8 para DESKTOP:</p>
+      <img src="./assets/text.png" />
+    </section>
+  </div>
+  </body>
+  </html>
