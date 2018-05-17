@@ -1,0 +1,39 @@
+---
+---
+
+.menu {
+  width: 20%;
+  height: 100%;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  background-color: #272727;
+
+  ul {
+    margin: 0px;
+    padding: 0px;
+
+    a {
+      display: block;
+      padding: 8px;
+      border-bottom: 1px solid #797979;
+      color: #fff;
+      text-decoration: none;
+
+      &:hover {
+        background-color: #fff;
+        color: #000;
+        border-bottom: 1px solid #000;
+      }
+    }
+  }
+}
+
+.container2 {
+  position: fixed !important;
+  width: 80% !important;
+  height: 100%;
+  margin-left: 20% !important;
+  overflow: scroll !important;
+  padding: 40px;
+}

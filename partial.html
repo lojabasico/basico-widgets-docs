@@ -1,73 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Widget - Partial</title>
+---
+title: Partial
+layout: default
+---
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<h1>Widget - Partial</h1>
+<p>Esse Widget tem como função principal reutilizar componentes pré existentes em outras páginas.</p>
+<p>Ele não é visivel no front da página, porem é um widget essencial para a boa construção de landing pages.</p>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/rainbow.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/htmlbars.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-</head>
-<body>
-  <div class="container">
-    <h1>Widget - Partial</h1>
-    <p>Esse Widget tem como função principal reutilizar componentes pré existentes em outras páginas.</p>
-    <p>Ele não é visivel no front da página, porem é um widget essencial para a boa construção de landing pages.</p>
+<img width="50%" src="./assets/landing-partial.jpg" />
 
-    <img width="50%" src="./assets/landing-partial.jpg" />
+<br/><br/>
 
-    <br/><br/>
-
-    <section>
-      <h2>Markup Base</h2>
+<section>
+  <h2>Markup Base</h2>
   <pre>
   <code class="html">
   &lt;landing-partial handle="todos-os-materiais"&gt;
   &lt;/landing-partial&gt;
   </code>
   </pre>
-    </section>
+</section>
 
-    <section>
-      <hr>
-      <h2>Attributos</h2>
-      <table class="table table-striped">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">Código</th>
-            <th scope="col">Nome</th>
-            <th scope="col">Descrição</th>
-            <th scope="col">Exemplo</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>handle</td>
-            <td>Referencia da Landing Page</td>
-            <td>O shopify chama isso de Handle, e ele também pode ser encontrado na URL da página.</td>
-            <td>todos-os-materiais</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+<section>
+  <hr>
+  <h2>Attributos</h2>
+  <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Código</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Exemplo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>handle</td>
+        <td>Referencia da Landing Page</td>
+        <td>O shopify chama isso de Handle, e ele também pode ser encontrado na URL da página.</td>
+        <td>todos-os-materiais</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
 
-    <br/>
-    <section>
-      <h2>Obtendo o Handle</h2>
-      <p>Todas as páginas possuem seu próprio handle, e ele sempre é único. Para saber qual é o handle, abra a página em "Online Store -> Pages -> Sua página", e role a tela para baixo, conforme a imagem:</p>
+<br/>
+<section>
+  <h2>Obtendo o Handle</h2>
+  <p>Todas as páginas possuem seu próprio handle, e ele sempre é único. Para saber qual é o handle, abra a página em "Online Store -> Pages -> Sua página", e role a tela para baixo, conforme a imagem:</p>
 
-      <img width="100%" src="./assets/handle-explain.jpg" />
-    </section>
+  <img width="100%" src="./assets/handle-explain.jpg" />
+</section>
 
-    <section>
-      <hr>
-      <h2>Aplicações</h2>
-      <p>Esse Widget só tem uma aplicação.</p>
+<section>
+  <hr>
+  <h2>Aplicações</h2>
+  <p>Esse Widget só tem uma aplicação.</p>
   <pre>
   <code class="html">
   &lt;landing-partial handle="todos-os-materiais"&gt;
@@ -75,11 +63,8 @@
   </code>
   </pre>
 
-      <p>Este exemplo renderiza a página "todos os materiais" dentro da sua página:</p>
+  <p>Este exemplo renderiza a página "todos os materiais" dentro da sua página:</p>
 
 
-      <img width="100%" src="./assets/todos-os-materiais.png" />
-    </section>
-  </div>
-  </body>
-  </html>
+  <img width="100%" src="./assets/todos-os-materiais.png" />
+</section>

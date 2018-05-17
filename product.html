@@ -1,47 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Widget - Produto</title>
+---
+title: Produto
+layout: default
+---
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<h1>Widget - Produto</h1>
+<p>Esse Widget tem como função principal aprensentar um produto, com foto, titulo e breve descritivo, alem de formatar um link para a página do mesmo.</p>
+<p>É possivel setar via parametro a quantidade de imagens que serão exibidas do produto, variando entre 1 ou 2.</p>
+<section>
+  <hr>
+  <h2>Apresentação</h2>
+  <table class="table table-bordered table-sm">
+    <thead>
+      <th>Versão</th>
+      <th>Preview</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1 imagem</td>
+        <td><img src="./assets/product.png" /></td>
+      </tr>
+      <tr>
+        <td>2 imagens</td>
+        <td><img src="./assets/product-double.png" /></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/rainbow.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/htmlbars.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-</head>
-<body>
-  <div class="container">
-    <h1>Widget - Produto</h1>
-    <p>Esse Widget tem como função principal aprensentar um produto, com foto, titulo e breve descritivo, alem de formatar um link para a página do mesmo.</p>
-    <p>É possivel setar via parametro a quantidade de imagens que serão exibidas do produto, variando entre 1 ou 2.</p>
-    <section>
-      <hr>
-      <h2>Apresentação</h2>
-      <table class="table table-bordered table-sm">
-        <thead>
-          <th>Versão</th>
-          <th>Preview</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1 imagem</td>
-            <td><img src="./assets/product.png" /></td>
-          </tr>
-          <tr>
-            <td>2 imagens</td>
-            <td><img src="./assets/product-double.png" /></td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section>
-      <h2>Markup Base</h2>
-      <p>Esse widget precisa de atributos em sua tag obrigatoriamente.</p>
+<section>
+  <h2>Markup Base</h2>
+  <p>Esse widget precisa de atributos em sua tag obrigatoriamente.</p>
   <pre>
   <code class="html">
   &lt;landing-product
@@ -53,52 +41,52 @@
   &lt;/landing-product&gt;
   </code>
   </pre>
-    </section>
+</section>
 
-    <section>
-      <hr>
-      <h2>Aplicações</h2>
-      <p>Esse Widget só tem uma aplicação e o layout é o mesmo para todos os breakpoints.</p>
-      <p>Seus parametros são:</p>
-      <table class="table table-bordered table-sm">
-        <thead>
-          <th>Parametro</th>
-          <th>Obrigatório</th>
-          <th>Descrição</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td>title</td>
-            <td>não</td>
-            <td>titulo do widget, que deve, provavelmente remeter ao produto</td>
-          </tr>
-          <tr>
-            <td>desc</td>
-            <td>não</td>
-            <td>breve descritivo do widget (produto)</td>
-          </tr>
-          <tr>
-            <td>image</td>
-            <td>sim</td>
-            <td>imagem principal do produto</td>
-          </tr>
-          <tr>
-            <td>image2</td>
-            <td>não</td>
-            <td>imagem secundaria não obrigatoria</td>
-          </tr>
-          <tr>
-            <td>link</td>
-            <td>sim</td>
-            <td>link para a página do produto</td>
-          </tr>
-          <tr>
-            <td>label</td>
-            <td>sim</td>
-            <td>label do botão do widget</td>
-          </tr>
-        </tbody>
-      </table>
+<section>
+  <hr>
+  <h2>Aplicações</h2>
+  <p>Esse Widget só tem uma aplicação e o layout é o mesmo para todos os breakpoints.</p>
+  <p>Seus parametros são:</p>
+  <table class="table table-bordered table-sm">
+    <thead>
+      <th>Parametro</th>
+      <th>Obrigatório</th>
+      <th>Descrição</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>title</td>
+        <td>não</td>
+        <td>titulo do widget, que deve, provavelmente remeter ao produto</td>
+      </tr>
+      <tr>
+        <td>desc</td>
+        <td>não</td>
+        <td>breve descritivo do widget (produto)</td>
+      </tr>
+      <tr>
+        <td>image</td>
+        <td>sim</td>
+        <td>imagem principal do produto</td>
+      </tr>
+      <tr>
+        <td>image2</td>
+        <td>não</td>
+        <td>imagem secundaria não obrigatoria</td>
+      </tr>
+      <tr>
+        <td>link</td>
+        <td>sim</td>
+        <td>link para a página do produto</td>
+      </tr>
+      <tr>
+        <td>label</td>
+        <td>sim</td>
+        <td>label do botão do widget</td>
+      </tr>
+    </tbody>
+  </table>
   <pre>
   <code class="html">
   &lt;landing-product
@@ -111,7 +99,4 @@
   &lt;/landing-product&gt;
   </code>
   </pre>
-    </section>
-  </div>
-  </body>
-  </html>
+</section>

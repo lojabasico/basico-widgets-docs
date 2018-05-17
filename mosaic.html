@@ -1,47 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Widget - Mosaico</title>
+---
+title: Mosaico
+layout: default
+---
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<h1>Widget - Mosaico</h1>
+<p>Esse Widget tem como função principal arrumar imagens em formato de mosaico. Ele é formado automaticamente, passando a lista de imagens, mas funciona somente com tags img</p>
+<p class="alert alert-danger">Esse widget só funciona com tags &lt;img&gt;</p>
+<section>
+  <hr>
+  <h2>Apresentação</h2>
+  <table class="table table-bordered table-sm">
+    <thead>
+      <th>Versão</th>
+      <th>Preview</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Desktop</td>
+        <td><img src="./assets/mosaic.png" /></td>
+      </tr>
+      <tr>
+        <td>Mobile</td>
+        <td><img src="./assets/mosaic-mobile.png" /></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/rainbow.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/htmlbars.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-</head>
-<body>
-  <div class="container">
-    <h1>Widget - Mosaico</h1>
-    <p>Esse Widget tem como função principal arrumar imagens em formato de mosaico. Ele é formado automaticamente, passando a lista de imagens, mas funciona somente com tags img</p>
-    <p class="alert alert-danger">Esse widget só funciona com tags &lt;img&gt;</p>
-    <section>
-      <hr>
-      <h2>Apresentação</h2>
-      <table class="table table-bordered table-sm">
-        <thead>
-          <th>Versão</th>
-          <th>Preview</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Desktop</td>
-            <td><img src="./assets/mosaic.png" /></td>
-          </tr>
-          <tr>
-            <td>Mobile</td>
-            <td><img src="./assets/mosaic-mobile.png" /></td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <section>
-      <h2>Markup Base</h2>
-      <p>Esse widget não precisa de atributos em sua tag.</p>
+<section>
+  <h2>Markup Base</h2>
+  <p>Esse widget não precisa de atributos em sua tag.</p>
   <pre>
   <code class="html">
   &lt;landing-mosaic&gt;
@@ -54,29 +42,29 @@
   &lt;/landing-mosaic&gt;
   </code>
   </pre>
-    </section>
+</section>
 
-    <section>
-      <hr>
-      <h2>Aplicações</h2>
-      <p>Esse Widget só tem uma aplicação, com uma configuração de responsividade ja formatada.</p>
-      <p>No breakpoint de DESKTOP o mosaico é formatado com 3 colunas e em MOBILE com 2.</p>
-      <table class="table table-bordered table-sm">
-        <thead>
-          <th>Versão</th>
-          <th>Colunas</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Desktop</td>
-            <td>3</td>
-          </tr>
-          <tr>
-            <td>Mobile</td>
-            <td>2</td>
-          </tr>
-        </tbody>
-      </table>
+<section>
+  <hr>
+  <h2>Aplicações</h2>
+  <p>Esse Widget só tem uma aplicação, com uma configuração de responsividade ja formatada.</p>
+  <p>No breakpoint de DESKTOP o mosaico é formatado com 3 colunas e em MOBILE com 2.</p>
+  <table class="table table-bordered table-sm">
+    <thead>
+      <th>Versão</th>
+      <th>Colunas</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Desktop</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>Mobile</td>
+        <td>2</td>
+      </tr>
+    </tbody>
+  </table>
 
   <pre>
   <code class="html">
@@ -90,7 +78,4 @@
   &lt;/landing-mosaic&gt;
   </code>
   </pre>
-    </section>
-  </div>
-  </body>
-  </html>
+</section>
