@@ -25,5 +25,11 @@
 - name: Product
   url: product.html
 
+- name: Radio
+  url: radio.html
+
+- name: Slider
+  url: slider.html
+
 - name: Text
   url: text.html

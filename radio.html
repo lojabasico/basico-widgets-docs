@@ -1,0 +1,109 @@
+---
+title: Radio
+layout: default
+---
+
+<h1>Widget - Radio</h1>
+<p>Esse Widget tem como função principal replicar a funcionalidade de radio button, tanto para passar dados em formulários como para disponibilizar opções distintas de forma customizada.</p>
+<p>É possivel instanciar varias opções dentro de varios grupos distintos.</p>
+<section>
+  <hr>
+  <h2>Apresentação</h2>
+  <table class="table table-bordered table-sm">
+    <thead>
+      <th>Versão</th>
+      <th>Preview</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Unica</td>
+        <td><img src="./assets/radio.png" /></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>Markup Base</h2>
+  <p>Esse widget precisa de atributos obrigatórios definidos em sua tag, para manter a estrutura HTML inalteravel e definir seu grupo, valor e label.</p>
+  <p>É possivel também passar conteudo dentro do widget, para ser renderizado dentro do markup do mesmo.</p>
+  <pre>
+<code class="html">
+  &lt;landing-radio
+  name="groupName"
+  label="label"
+  value="10"&gt;&lt;/landing-radio&gt;
+
+</code>
+</pre>
+</section>
+
+<section>
+  <hr>
+  <h2>Attributos</h2>
+  <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Código</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Campo Obrigatório</th>
+        <th scope="col">Exemplo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>name</td>
+        <td>Nome do Grupo</td>
+        <td>Grupo ao qual esse radio pertende</td>
+        <td>Sim</td>
+        <td>group1</td>
+      </tr>
+      <tr>
+        <td>label</td>
+        <td>Label do Input</td>
+        <td>Texto que aparece no widget</td>
+        <td>Sim</td>
+        <td>R$ 118</td>
+      </tr>
+      <tr>
+        <td>value</td>
+        <td>Valor do Radio</td>
+        <td>Valor da opção do radio que for relecionado</td>
+        <td>Sim</td>
+        <td>118</td>
+      </tr>
+      <tr>
+        <td>is_selected</td>
+        <td>Selecionado</td>
+        <td>Determina se esse radio estara selecionado dentro de um grupo</td>
+        <td>Não</td>
+        <td>true</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <hr>
+  <h2>Aplicações</h2>
+  <p>Esse Widget só tem uma aplicação, com uma configuração de responsividade ja formatada.</p>
+
+  <pre>
+<code class="html">
+  &lt;landing-radio
+  name="values"
+  label="R$ 98"
+  value="98"&gt;&lt;/landing-radio&gt;
+  &lt;landing-radio
+  name="values"
+  label="R$ 118"
+  value="118"&gt;&lt;/landing-radio&gt;
+  &lt;landing-radio
+  name="values"
+  label="R$ 193"
+  value="193"&gt;&lt;/landing-radio&gt;
+
+</code>
+</pre>
+</section>
