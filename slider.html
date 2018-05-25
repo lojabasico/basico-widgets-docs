@@ -1,0 +1,61 @@
+---
+title: Slider
+layout: default
+---
+
+<h1>Widget - Slider</h1>
+<p>Esse Widget tem como função principal aprensentar conteúdo em forma de slider (carrossel).</p>
+<p>É possivel setar as configurações do carrossel seguindo a parametrização do Slick (<a href="http://kenwheeler.github.io/slick/" target="_blank">http://kenwheeler.github.io/slick/</a>)</p>
+<section>
+  <hr>
+  <h2>Apresentação</h2>
+  <table class="table table-bordered table-sm">
+    <thead>
+      <th>Versão</th>
+      <th>Preview</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>desktop</td>
+        <td><img src="./assets/carrossel.png" /></td>
+      </tr>
+      <tr>
+        <td>desktop</td>
+        <td><img src="./assets/carrossel-mobile.png" /></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>Markup Base</h2>
+  <p>É possivel passar para este widget, parâmetros em sua tag, mas eles são opcionais.</p>
+  <pre>
+  <code class="html">
+  &lt;landing-slider&gt;
+    &lt;landing-caption image="image-1.jpg"&gt;&lt;/landing-caption&gt;
+    &lt;landing-caption image="image-2.jpg"&gt;&lt;/landing-caption&gt;
+  &lt;/landing-slider&gt;
+  </code>
+  </pre>
+</section>
+
+<section>
+  <hr>
+  <h2>Aplicações</h2>
+  <p>Esse Widget só tem uma aplicação e seus parametros devem ser passados no formado de objeto seguindo a convenção do Slick (<a href="http://kenwheeler.github.io/slick/" target="_blank">http://kenwheeler.github.io/slick/</a>)</p>
+  <pre>
+  <code class="html">
+  &lt;landing-slider&gt;
+    &lt;landing-caption
+      image="https://cdn.shopify.com/s/files/1/1324/3705/files/m-fabrica-carrossel-1.jpg?7988722143157319649"
+      image_620="https://cdn.shopify.com/s/files/1/1324/3705/files/fabrica-carrossel-1.jpg?7988722143157319649"&gt;
+    &lt;/landing-caption&gt;
+    &lt;landing-caption
+      image="https://cdn.shopify.com/s/files/1/1324/3705/files/m-fabrica-carrossel-2.jpg?7988722143157319649"
+      image_620="https://cdn.shopify.com/s/files/1/1324/3705/files/fabrica-carrossel-2.jpg?7988722143157319649"&gt;
+    &lt;/landing-caption&gt;
+  &lt;/landing-slider&gt;
+  </code>
+  </pre>
+</section>
