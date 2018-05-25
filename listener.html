@@ -1,0 +1,97 @@
+---
+title: Listener
+layout: default
+---
+
+<h1>Widget - Listener</h1>
+<p>Esse Widget possibilita mostrar conteúdo dinâmico com base no comportamento de outro Widget</p>
+
+<div class="image-block">
+  <img src="./assets/listener-example.gif" width="500" />
+</div>
+
+<p>
+  Na imagem acima, as 3 opções representam componentes do tipo "Radio", que emitem um evento especial LandingRadio/grupo, toda vez que o usuário clica em uma opção.
+</p>
+<p>
+  O listener representa o texto que está logo abaixo. Você pode perceber que conforme o usuário escolhe uma opção, o texto "muda". <br/>Isso é o que chamamos de "reagir" a uma interação de outro componente.
+</p>
+<p>
+  O componente Listener "reage" a uma mudança de um outro componente (no caso o Radio), e pode mostrar informações ou ativar comportamentos dependendo da interação do usuário.
+</p>
+
+<p class="alert alert-danger">Esse Widget só é compatível com componentes que emitem eventos.</p>
+
+<section>
+  <h2>Markup Base</h2>
+  <pre>
+  <code class="html">
+  &lt;landing-listener eventname="algum_evento"&gt;
+    &lt;template scope="props"&gt;
+      ...
+    &lt;/template&gt;
+  &lt;/landing-listener&gt;
+  </code>
+  </pre>
+</section>
+
+<section>
+  <hr>
+  <h2>Attributos</h2>
+  <p>
+    Esse widget possui apenas 1 atributo.
+  </p>
+  <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Código</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Exemplo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>eventname</td>
+        <td>Nome do Evento</td>
+        <td>É o nome do evento que o componente que você quer reagir emite (para saber qual valor usar, você deve consultar a documentação do componente compatível que você quer interagir)</td>
+        <td>LandingRadio/grupo</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <hr>
+  <h2>Aplicações</h2>
+  <p>Esse Widget tem infinitas aplicações, então para facilitar vou dar um exemplo prático seguindo como base o exemplo do Widget dos 3 Preços.</p>
+
+  <pre>
+  <code class="html">
+    &lt;!-- COMPONENTE LANDING-RADIO --&gt;
+    &lt;landing-radio name="teste" label="R$ 98" value="98">&lt;/landing-radio&gt;
+    &lt;landing-radio name="teste" label="R$ 118" value="118"&gt;&lt;/landing-radio&gt;
+    &lt;landing-radio name="teste" label="R$ 193" value="193"&gt;&lt;/landing-radio&gt;
+
+    &lt;!-- COMPONENTE LANDING-LISTENER --&gt;
+    &lt;!-- O componente listener está interagindo com o componente LandingRadio. --&gt;
+    &lt;!-- Aqui, para cada opção do LandingRadio, existe um texto específico que é exibido ao usuário --&gt;
+    &lt;landing-listener eventname="LandingRadio/teste"&gt;
+      &lt;template scope="props"&gt;
+        &lt;template v-if="props.eventdata.value == '98'"&gt;
+          &lt;h2&gt;onde estamos&lt;/h2&gt;
+          &lt;p&gt;por trabalharmos com importação - entre outras coisas - estamos sujeitos a flutuações que impactam nossos custos, do câmbio e materiais à logística. este valor atualmente cobre apenas os custos de produção e operação&lt;/p&gt;
+        &lt;/template&gt;
+        &lt;template v-if="props.eventdata.value == '118'"&gt;
+          &lt;h2&gt;onde vamos&lt;/h2&gt;
+          &lt;p&gt;precisamos rever nossos preços para mantermos uma equação saudável, mas ainda com o compromisso de oferecer básicos de qualidade a um valor justo. este preço cobre custos básicos de operação e comunicação, com margem para seguirmos investindo em novos produtos.&lt;/p&gt;
+        &lt;/template&gt;
+        &lt;template v-if="props.eventdata.value == '193'"&gt;
+          &lt;h2&gt;onde está o mercado&lt;/h2&gt;
+          &lt;p&gt;este é o preço médio praticado no mercado para produtos de qualidade equivalente e composição 100% algodão pima. otimizamos nossa operação e eliminamos intermediários para que você não pague este valor por aqui.&lt;/p&gt;
+        &lt;/template&gt;
+      &lt;/template&gt;
+    &lt;/landing-listener&gt;
+  </code>
+  </pre>
+</section>
