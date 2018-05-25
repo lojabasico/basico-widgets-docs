@@ -86,6 +86,49 @@ layout: default
 
 <section>
   <hr>
+  <h2>Evento</h2>
+  <p>Este widget dispara um evento customizado ao ter uma das opções selcionadas.</p>
+  <h3>Convenção do Evento</h3>
+  <p>O parâmetro name do evento é o mesmo parâmetro passado na tag do widget.</p>
+  <p>Para usar o evento emitido, basta substituir o "[NAME]" pelo valor do parâmetro passado anteriormente.</p>
+  <pre>
+<code class="html">
+  "LandingRadio/[NAME]"
+
+</code>
+</pre>
+  <h3>Parâmetros do evento</h3>
+  <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Exemplo de Valor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>name</td>
+        <td>Nome do Grupo</td>
+        <td>group1</td>
+      </tr>
+      <tr>
+        <td>value</td>
+        <td>Valor do widget</td>
+        <td>118</td>
+      </tr>
+      <tr>
+        <td>label</td>
+        <td>Label do Input</td>
+        <td>R$ 118</td>
+      </tr>
+    </tbody>
+  </table>
+</pre>
+</section>
+
+<section>
+  <hr>
   <h2>Aplicações</h2>
   <p>Esse Widget só tem uma aplicação, com uma configuração de responsividade ja formatada.</p>
 
