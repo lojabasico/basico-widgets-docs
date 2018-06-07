@@ -33,3 +33,6 @@
 
 - name: Text
   url: text.html
+
+- name: Class
+  url: class.html

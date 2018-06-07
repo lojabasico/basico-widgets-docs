@@ -1,102 +1,16 @@
 ---
-title: Text
+title: Class
 layout: default
 ---
 
-<h1>Widget - Text</h1>
-<p>Esse Widget tem como função principal inserir, já formatados todos os tipos de texto nas páginas, como titulos, subtitulos e paragrafos.</p>
-<p>O widget formata os seguintes markups:</p>
-<ul>
-  <li>h1</li>
-  <li>h2</li>
-  <li>h3</li>
-  <li>h4</li>
-  <li>h5</li>
-  <li>h6</li>
-  <li>p</li>
-</ul>
+<h1>Custom Classes</h1>
+<p>Exitem uma serie de classes pré formatadas que podem ser aplicadas nas tags HTML, para facilitar a customização do conteudo.</p>
 
 <section>
   <hr>
   <h2>Apresentação</h2>
-  <table class="table table-bordered table-sm">
-    <thead>
-      <th>Tag</th>
-      <th>Preview</th>
-    </thead>
-    <tbody>
-      <tr>
-        <td>h1</td>
-        <td><img src="./assets/h1.png" /></td>
-      </tr>
-      <tr>
-        <td>h2</td>
-        <td><img src="./assets/h2.png" /></td>
-      </tr>
-      <tr>
-        <td>h3</td>
-        <td><img src="./assets/h3.png" /></td>
-      </tr>
-      <tr>
-        <td>h4</td>
-        <td><img src="./assets/h4.png" /></td>
-      </tr>
-      <tr>
-        <td>h5</td>
-        <td><img src="./assets/h5.png" /></td>
-      </tr>
-      <tr>
-        <td>h6</td>
-        <td><img src="./assets/h6.png" /></td>
-      </tr>
-      <tr>
-        <td>p</td>
-        <td><img src="./assets/p.png" /></td>
-      </tr>
-    </tbody>
-  </table>
-</section>
 
-<section>
-  <h2>Markup Base</h2>
-  <p>Esse widget não precisa de atributos em sua tag.</p>
-  <pre>
-  <code class="html">
-  &lt;landing-text&gt;
-    &lt;h1&gt;Tela em Branco&lt;/h1&gt;
-    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-  &lt;/landing-text&gt;
-  </code>
-  </pre>
-
-  <p>O exemplo acima formata o seguinte:</p>
-  <div class="alert alert-dark">
-    <img src="./assets/text.png" />
-  </div>
-</section>
-
-<section>
-  <hr>
-  <h2>Aplicações</h2>
-  <p>Esse Widget só tem uma aplicação, com uma configuração de responsividade ja formatada.</p>
-  <p>É importante notar, que ele obece uma estrutura HTML padrão para formatação de seus componentes (h1, h2, p, etc...).</p>
-
-  <pre>
-  <code class="html">
-  &lt;landing-text&gt;
-    &lt;h1&gt;Tela em Branco&lt;/h1&gt;
-    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-  &lt;/landing-text&gt;
-  </code>
-  </pre>
-</section>
-
-<section>
-  <hr>
-  <h2>Customizações</h2>
-  <p>Exitem uma serie de classes pré formatadas que podem ser aplicadas nas tags HTML, para facilitar a customização do conteudo.</p>
-  <p>A seguire seguem, separados por tipo de alteração, as classes:</p>
-
+  <p>Para formatação de textos:</p>
   <h3 class="mt-3">Tamanho de font</h3>
   <table class=" table-bordered table-sm">
     <thead>
@@ -225,6 +139,100 @@ layout: default
       <tr>
         <td>ttu</td>
         <td>TODAS MAIUSCULAS</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Espaçamento de elementos:</p>
+  <h3 class="mt-3">Margens</h3>
+  <table class=" table-bordered table-sm">
+    <thead>
+      <tr>
+        <th width="250">Class</th>
+        <th>Sentido</th>
+        <th>Margem</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>top-7px</td>
+        <td>topo</td>
+        <td>7px</td>
+      </tr>
+
+      <tr>
+        <td>top-14px</td>
+        <td>topo</td>
+        <td>14px</td>
+      </tr>
+
+      <tr>
+        <td>top-21px</td>
+        <td>topo</td>
+        <td>21px</td>
+      </tr>
+
+      <tr>
+        <td>top-28px</td>
+        <td>topo</td>
+        <td>28px</td>
+      </tr>
+
+      <tr>
+        <td>bottom-7px</td>
+        <td>baixo</td>
+        <td>7px</td>
+      </tr>
+
+      <tr>
+        <td>bottom-14px</td>
+        <td>baixo</td>
+        <td>14px</td>
+      </tr>
+
+      <tr>
+        <td>bottom-21px</td>
+        <td>baixo</td>
+        <td>21px</td>
+      </tr>
+
+      <tr>
+        <td>bottom-28px</td>
+        <td>baixo</td>
+        <td>28px</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="mt-3">Existem classes que sobrescreverm as classes default, para poder alterar os tamanhos em breakpoints diferentes. Essas classes seguem um padrão onde deve ser colocado o numero do breakpoint na classe, por exemplo:</p>
+
+  <pre>
+  <code class="html">
+  &lt;landing-text&gt;
+    &lt;p class="text-medium text-620-head text-1220-ultra" &gt;teste de texto&lt;/p&gt;
+  &lt;/landing-text&gt;
+  </code>
+  </pre>
+
+  <p>Esse código acima altera o tamanho do texto em 3 breakpoints diferentes: MOBILE, TABLET e DESKTOP.</p>
+
+  <table class="table table-bordered table-sm">
+    <thead>
+      <th>Versão</th>
+      <th>Preview</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Desktop</td>
+        <td><img src="./assets/responsive-text-size-3.jpg"></td>
+      </tr>
+      <tr>
+        <td>Tablet</td>
+        <td><img src="./assets/responsive-text-size-3.jpg"></td>
+      </tr>
+      <tr>
+        <td>Mobile</td>
+        <td><img src="./assets/responsive-text-size-1.jpg"></td>
       </tr>
     </tbody>
   </table>
