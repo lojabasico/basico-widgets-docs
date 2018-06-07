@@ -20,11 +20,11 @@ layout: default
   <p>Esse widget precisa de atributos definidos em sua tag, para manter a estrutura HTML inalteravel.</p>
   <pre>
   <code class="html">
-  &lt;landing-grid columns="36"&gt;
-    &lt;landing-grid columns="36" desk_columns="8"&gt;
+  &lt;grid columns="36"&gt;
+    &lt;grid columns="36" desk_columns="8"&gt;
       ...
-    &lt;/landing-grid&gt;
-  &lt;/landing-grid&gt;
+    &lt;/grid&gt;
+  &lt;/grid&gt;
   </code>
   </pre>
 </section>
@@ -49,16 +49,22 @@ layout: default
         <td>36</td>
       </tr>
       <tr>
-        <td>desk_columns</td>
-        <td>Colunas para definições de TABLET e DESKTOP</td>
-        <td>Numero de colunas que serão aplicadas somente nos breakpoints de DESKTOP e TABLET</td>
-        <td>18</td>
-      </tr>
-      <tr>
         <td>mobile_columns</td>
         <td>Colunas para breakpoint de MOBILE</td>
         <td>Numero de colunas que serão aplicadas somente nos breakpoints de MOBILE</td>
         <td>36</td>
+      </tr>
+      <tr>
+        <td>tablet_columns</td>
+        <td>Colunas para breakpoint de TABLET</td>
+        <td>Numero de colunas que serão aplicadas somente nos breakpoints de MOBILE</td>
+        <td>18</td>
+      </tr>
+      <tr>
+        <td>desk_columns</td>
+        <td>Colunas para definições de TABLET e DESKTOP</td>
+        <td>Numero de colunas que serão aplicadas somente nos breakpoints de DESKTOP e TABLET</td>
+        <td>9</td>
       </tr>
     </tbody>
   </table>
@@ -71,14 +77,14 @@ layout: default
   <p>O conteúdo interno desse widget serão os outros widgets ou HTML, lembrando que o intuito deste é limitar esse conteúdo interno dentro do grid do tema.</p>
   <pre>
   <code class="html">
-  &lt;landing-grid columns="36"&gt;
-    &lt;landing-grid columns="36" desk_columns="8"&gt;
+  &lt;grid columns="36"&gt;
+    &lt;grid columns="36" desk_columns="8"&gt;
       &lt;landing-text&gt;
         &lt;h1&gt;Tela em Branco&lt;/h1&gt;
         &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
       &lt;/landing-text&gt;
-    &lt;/landing-grid&gt;
-  &lt;/landing-grid&gt;
+    &lt;/grid&gt;
+  &lt;/grid&gt;
   </code>
   </pre>
   <p>Este exemplo renderiza o titulo e descrição no grid 36 para MOBILE e 8 para DESKTOP:</p>
